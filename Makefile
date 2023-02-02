@@ -1,3 +1,6 @@
+update:
+	pnpm i
+	
 start:
 	pnpm dev
 
