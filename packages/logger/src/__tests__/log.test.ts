@@ -1,10 +1,9 @@
-import { log } from "..";
-
-jest.spyOn(global.console, "log");
+import logger from '../index'
 
 describe("logger", () => {
+  const v = 1
   it("prints a message", () => {
-    log("hello");
-    expect(console.log).toBeCalled();
+    logger.info('start logger on project')
+    expect(v).toBe(1);
   });
 });

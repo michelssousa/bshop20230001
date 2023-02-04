@@ -1,3 +1,11 @@
-export const log = (str: any) => {
-  console.log("logger: " + str);
-};
+import pino from 'pino';
+
+export default pino({
+  transport: {
+    target: 'pino-pretty',
+    options: {
+      translateTime: 'SYS:dd-mm-yy HH:MM:ss',
+      ignore: 'pid,hostname',
+    },
+  },
+});
