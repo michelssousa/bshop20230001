@@ -5,8 +5,5 @@ import * as uuid from 'uuid';
  * @example makeId()
 *@returns uuuid string
 * */
-const makeId = (): string => uuid.v4();
+export const makeID = (): string => uuid.v4();
 
-export default {
-  makeId
-}

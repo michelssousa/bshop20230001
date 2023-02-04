@@ -6,6 +6,8 @@ export type Error = Partial<MsgProps>
 
 export type OK = Partial<MsgProps>
 
+export const Fn = <T>(x: T): T => x;
+
 class success<V, E extends Error> {
   constructor(private value: V) { }
 

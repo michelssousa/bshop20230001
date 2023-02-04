@@ -19,6 +19,7 @@
     "preset": "jest-presets/jest/node"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@types/jest": "^26.0.22",
     "@types/node": "^18.11.9",
     "@types/uuid": "^9.0.0",
