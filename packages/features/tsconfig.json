@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*","./dist/*"],
+      "@src-support/*": ["./src/suport/*"],
+      "@src-entities/*": ["./src/__entities__/*"],
+      "@src-services/*": ["./src/__services__/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "extends": "tsconfig/base.json",
+  "include": ["src"]
+}

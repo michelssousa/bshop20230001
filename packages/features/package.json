@@ -1,5 +1,5 @@
 {
-  "name": "core-app",
+  "name": "features",
   "version": "0.0.1",
   "private": true,
   "main": "./dist/index.js",
@@ -13,25 +13,31 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "dev": "tsc -w",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
-    "test": "jest"
+    "test": "jest",
+    "ts:test": "ts-node-dev -r tsconfig-paths/register ./__delete__.ts"
   },
   "jest": {
     "preset": "jest-presets/jest/node"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.24",
     "@types/node": "^18.11.9",
     "@types/uuid": "^9.0.0",
+    "database": "workspace:*",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "jest": "^26.6.3",
     "jest-presets": "workspace:*",
+    "logger": "workspace:*",
+    "ts-jest": "^26.5.0",
     "tsconfig": "workspace:*",
     "typescript": "^4.8.3"
   },
   "dependencies": {
+    "eslint-config-turbo": "^0.0.7",
     "http-status-codes": "^2.2.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "zod": "^3.20.2"
   }
 }

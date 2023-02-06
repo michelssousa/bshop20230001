@@ -62,4 +62,3 @@ export type SuccessOrFailure<V, E extends Error> =
   | success<V, E>
   | failure<V, E>;
 
-

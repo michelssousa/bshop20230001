@@ -1,11 +1,12 @@
-update:
-	pnpm i
+hello:
+	echo "Hello, World"
 	
-start:
-	pnpm dev
-
 test:
 	pnpm run test
 
-testLocal:
-	npx ts-node __delete.ts
+clear:
+	pnpm run clean
+
+tsTest:
+	pnpm run ts:test
+

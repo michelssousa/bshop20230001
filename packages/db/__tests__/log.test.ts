@@ -1,7 +1,3 @@
-import * as core from 'core-app'
-// import { faker } from '@faker-js/faker';
-import { Error, Failure, Success, SuccessOrFailure } from '../dist/suport/utils/common.types';
-
 const can = {
   name: 'pamplemousse',
   ounces: 12,
@@ -18,32 +14,6 @@ describe('the can', () => {
 })
 
 
-describe('support test', () => {
-  test('should be able return string', () => {
-    expect(core._cm.makeID()).not.toBeNull();
-  });
-})
-
-
-describe('support test function SuccessOrFailure', () => {
-  const _msgError = core._msg.failure.bad_request
-
-  const v1 = 10
-  const v2 = 20
-
-  const _checkResultokOrError = (v1: number, v2: number): SuccessOrFailure<boolean, Error> => {
-    if (core._check.isGreaterThat(v1, v2)) {
-      return Success(true)
-    }
-    return Failure(_msgError)
-  }
-
-  const _resultokOrError = _checkResultokOrError(v1, v2)
-
-  test('should be able return string', () => {
-    expect(_resultokOrError.isFailure()).toBe(true);
-  });
-})
 
 // import { faker } from '@faker-js/faker';
 //

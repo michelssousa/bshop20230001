@@ -4,5 +4,6 @@ import * as React from "react";
 import "./styles.css";
 
 // components
+export * from "./util";
 export * from "./Button";
 export * from "./Card";
