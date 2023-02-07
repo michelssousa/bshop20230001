@@ -1,17 +1,35 @@
 import { SuccessOrFailure, Error, _msg, Success, Failure } from '@src/index'
-import { z } from 'zod'
+import { z, ZodRawShape } from 'zod'
 
-export const makeValidator = (schemaProps: any) => <T>(props: T): SuccessOrFailure<boolean, Error> => {
-  try {
-    const _schema = z.object(schemaProps)
-    _schema.parse(props)
-    return Success(true)
-  } catch {
-    return Failure(_msg.failure.no_accptable)
+export abstract class BuildMakeValidator<T> {
+
+  protected _schema: any
+  protected _buildSchema
+
+  /**
+   *
+   */
+  constructor() {
+    this._buildSchema = new Proxy(z, {})
+  }
+
+  /*
+  *rese
+  * **/
+  abstract MakeSchema(): void
+
+  check(schemaProps: T): SuccessOrFailure<boolean, Error> {
+    try {
+      const _schema = z.object(this._schema)
+      _schema.parse(schemaProps)
+      return Success(true)
+    } catch {
+      return Failure(_msg.failure.no_accptable)
+    }
   }
 }
 
-export { z as makeSchema } from 'zod'
+// export { z as MakeSchema } from 'zod'
 
 
 

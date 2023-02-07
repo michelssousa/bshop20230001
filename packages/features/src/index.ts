@@ -8,7 +8,7 @@ export * from './__entities__'
 //Export Types
 export type { Error, OK, SuccessOrFailure, Platform } from './suport/utils/common.types'
 export type { Database } from './__entities__/Database'
-export { makeSchema, makeValidator } from './__entities__/Validation'
+export * from './__entities__/Validation'
 
 
 
