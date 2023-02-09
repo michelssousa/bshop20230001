@@ -1,21 +1,15 @@
-import { SuccessOrFailure, Error, _msg, Success, Failure } from '@src/index'
-import { z, ZodRawShape } from 'zod'
+import { SuccessOrFailure, Error, Success, Failure, SwissArmyKnife as sw } from '@src/index'
+import { z } from 'zod'
 
 export abstract class BuildMakeValidator<T> {
 
   protected _schema: any
-  protected _buildSchema
+  protected _buildSchema: any
 
-  /**
-   *
-   */
   constructor() {
     this._buildSchema = new Proxy(z, {})
   }
 
-  /*
-  *rese
-  * **/
   abstract MakeSchema(): void
 
   check(schemaProps: T): SuccessOrFailure<boolean, Error> {
@@ -24,12 +18,10 @@ export abstract class BuildMakeValidator<T> {
       _schema.parse(schemaProps)
       return Success(true)
     } catch {
-      return Failure(_msg.failure.no_accptable)
+      return Failure(sw.getMsg().Failure().no_context)
     }
   }
 }
-
-// export { z as MakeSchema } from 'zod'
 
 
 

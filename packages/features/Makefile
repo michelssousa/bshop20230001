@@ -4,7 +4,7 @@ tsTest:
 update:
 	pnpm i && pnpm run build
 
-jsTest:
+jesTest:
 	pnpm run test --config --detectOpenHandles --forceExit --runInBand --detectOpenHandles --no-cache --watchAll
 
 clean:

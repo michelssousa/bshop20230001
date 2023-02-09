@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
   "compilerOptions": {
+    "allowJs": true, 
     "composite": false,
     "declaration": true,
     "declarationMap": true,
@@ -12,8 +13,10 @@
     "moduleResolution": "node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "noImplicitAny": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
+    "strictNullChecks": true,
     "strict": true
   },
   "exclude": ["node_modules"]

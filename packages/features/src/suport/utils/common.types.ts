@@ -8,6 +8,10 @@ export type OK = Partial<MsgProps>
 
 export const Fn = <T>(x: T): T => x;
 
+export type Getters<Type> = {
+  [Property in keyof Type as `get${Capitalize<string & Property>}`]: () => Type[Property]
+};
+
 class success<V, E extends Error> {
   constructor(private value: V) { }
 

@@ -1,19 +1,35 @@
-export * as _cm from './suport/utils/common'
-export * as _msg from './suport/utils/common-msg'
-export * as _check from './suport/utils/common-check'
-export * as _config from './suport/utils/config'
-export * from './suport/utils/common.types'
-export * from './__entities__'
+import Url from './suport/utils/urls'
+import Common from './suport/utils/common'
+import Msg from './suport/utils/common-msg'
+
+export { BuildMakeValidator } from './__entities__/Validation'
 
 //Export Types
-export type { Error, OK, SuccessOrFailure, Platform } from './suport/utils/common.types'
 export type { Database } from './__entities__/Database'
-export * from './__entities__/Validation'
+export { Success, Failure, SuccessOrFailure, Platform, Error, OK } from './suport/utils/common.types'
 
 
+class FactorySwissArmyKnife {
+  /**
+   * getUrl
+   */
+  public getUrl() {
+    return new Url()
+  }
 
+  /**
+   * getUtils
+   */
+  public getUtils() {
+    return new Common()
+  }
 
+  /**
+   * getMsg
+   */
+  public getMsg() {
+    return new Msg()
+  }
+}
 
-
-
-
+export const SwissArmyKnife = new FactorySwissArmyKnife()
