@@ -1,3 +1,1 @@
-/**
- * here suport for application
- * */
+export * from './bot'

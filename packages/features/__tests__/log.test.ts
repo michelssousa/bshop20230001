@@ -1,8 +1,6 @@
 // // import { faker } from '@faker-js/faker';
 // // import {database} from 'database'
-import logger from 'logger'
 import { SwissArmyKnife, SuccessOrFailure, Error, Success, Failure, BuildMakeValidator } from 'features'
-
 const { getMsg, getUtils } = SwissArmyKnife
 
 const can = {

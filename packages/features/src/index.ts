@@ -1,15 +1,17 @@
 import Url from './suport/utils/urls'
 import Common from './suport/utils/common'
 import Msg from './suport/utils/common-msg'
+import logger from 'logger'
 
-export { BuildMakeValidator } from './__entities__/Validation'
+import { BuildMakeValidator, Database } from './__entities__'
 
 //Export Types
-export type { Database } from './__entities__/Database'
 export { Success, Failure, SuccessOrFailure, Platform, Error, OK } from './suport/utils/common.types'
+export { BuildMakeValidator, Database, logger }
 
+export type { DTO, FactoryMakeProps } from './__entities__'
 
-class FactorySwissArmyKnife {
+export class FactorySwissArmyKnife {
   /**
    * getUrl
    */
@@ -33,3 +35,6 @@ class FactorySwissArmyKnife {
 }
 
 export const SwissArmyKnife = new FactorySwissArmyKnife()
+
+export * from './__services__/bot'
+

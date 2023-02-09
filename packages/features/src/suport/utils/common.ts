@@ -63,6 +63,18 @@ export default class CommonFunctions {
   }
 
   /**
+   * Mask
+   */
+  public Mask() {
+    return {
+      phone: '+55 (099) 9 9999-9999',
+      date: '99/99/9999',
+      creditCard: '9999-9999-9999-9999',
+      cpf: '999.999.999.99',
+    }
+  }
+
+  /**
    * format 
    */
   public Format() {
